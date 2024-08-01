@@ -117,7 +117,7 @@ h6 {
 /* Center the image */
 .center-image {
     position: absolute;
-    top: 600%; /* Adjust this value to move the image down */
+    top: 800%; /* Adjust this value to move the image down */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10; /* Ensure it is above other elements */
@@ -143,16 +143,31 @@ h6 {
 
 
 .logo-dropdown {
-
   position: relative;
   display: inline-block;
-
 }
 
-.logo img {
-  width: 150px;
+.logo {
+  position: relative;
+  display: inline-block;
+  width: 150px; /* Set the width to the desired logo size */
   height: auto;
-  cursor: pointer;
+}
+
+.logo-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.5s ease, transform 0.3s ease, filter 0.3s ease;
+  opacity: 0;
+  pointer-events: none; /* Prevent click events on non-visible logos */
+}
+
+.logo-image.visible {
+  opacity: 1;
+  position: relative; /* Ensures the visible logo is on top */
 }
 
 .dropdown-content {
@@ -160,15 +175,8 @@ h6 {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  opacity: 0; /* Initial opacity */
-  transition: opacity 3.9s ease; /* Transition effect */
-}
-
-.dropdown-content.show {
-  display: block;
-  opacity: 1; /* Full opacity */
 }
 
 .dropdown-content a {
@@ -181,10 +189,6 @@ h6 {
 .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
-
-
-
-
 
 
 li > ol,

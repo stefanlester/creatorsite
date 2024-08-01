@@ -84,29 +84,17 @@
                
                   <div class="logo-dropdown">
                     <a href="#" class="logo" id="logo">
-                        <img src="images/cr1.png" alt="Creator Logo" id="crea" />
+                        <img src="images/cr1.png" alt="Creator Logo 1" class="logo-image visible" />
+                        <img src="images/cr2.png" alt="Creator Logo 2" class="logo-image" />
                     </a>
                     <div class="dropdown-content" id="dropdownContent">
-                        <a href="#link1">Menu 1</a>
-                        <a href="#link2">Menu 2</a>
-                        <a href="#link3">Menu 3</a>
+                        <a href="about-us.html">About</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="creators.html">Creators</a>
                     </div>
-                </div>
-            
+                </div>            
                   <div class="header__content-right">
-                    <nav class="header-nav-menu">
-                      <ul class="menu nav-menu">
-                        <li class="menu-item menu-item-has-children">
-                          <a href="index.html">Home</a>
-                        </li>
-                        <li class="menu-item">
-                          <a href="creators.html">About</a>
-                        </li>
-                        <li class="menu-item menu-item-has-children">
-                          <a href="projects.html">Projects</a>
-                        </li>
-                      </ul>
-                    </nav>
+                 
                     <div class="header-social">
                       <ul class="list-social">
                         <li class="list-social__item">
@@ -144,7 +132,7 @@
           <div class="header-mobile__bar">
             <div class="container-fluid">
               <div class="header-mobile__bar-inner">
-                <a class="logo" href="index-2.html">
+                <a class="logo" href="index.html">
                   <img src="images/cr1.png" width="100" alt="Tatee" />
                 </a>
                 <button
@@ -162,7 +150,7 @@
                 src="images/red.png"
                 class="center-img"
                 alt="centered image"
-                width="400"
+                width="600"
               />
             </div>
           </div>
@@ -173,10 +161,13 @@
                   <a href="index.html">Home</a>
                 </li>
                 <li class="menu-item">
-                  <a href="creators.html">about</a>
+                  <a href="about-us.html">About</a>
                 </li>
                 <li class="menu-item">
                   <a href="projects.html">Projects</a>
+                </li>
+                <li class="menu-item">
+                  <a href="creators.html">Creators</a>
                 </li>
                 
               </ul>
@@ -212,7 +203,7 @@
                 <li class="rev-item rev-item-1" data-transition="crossfade">
                   <img
                     class="rev-slidebg"
-                    src="images/creator1/nhs1.jpg"
+                    src="images/creator5/NEWNICC1.jpg"
                     alt="Master Slider 01"
                   />
                   <h4
@@ -269,7 +260,7 @@
                 </li>
                 <li
                   class="rev-item rev-item-1"
-                  data-transition="slotslide-horizontal"
+                  data-transition="crossfade"
                 >
                   <img
                     class="rev-slidebg"
@@ -328,7 +319,7 @@
                   >
                   </a>
                 </li>
-                <li class="rev-item rev-item-1" data-transition="papercut">
+                <li class="rev-item rev-item-1" data-transition="crossfade">
                   <img
                     class="rev-slidebg"
                     src="images/creator9/YAZZ3.jpg"
@@ -395,25 +386,37 @@
     </div>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          var logo = document.getElementById('logo');
-          var dropdownContent = document.getElementById('dropdownContent');
+      document.getElementById('logo').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default action if the link has an href
+    
+        var logo1 = document.querySelectorAll('.logo-image')[0];
+        var logo2 = document.querySelectorAll('.logo-image')[1];
+    
+        if (logo1.classList.contains('visible')) {
+            logo1.classList.remove('visible');
+            logo2.classList.add('visible');
+        } else {
+            logo1.classList.add('visible');
+            logo2.classList.remove('visible');
+        }
+    
+        var dropdownContent = document.getElementById('dropdownContent');
+        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+    });
+    
+    // Optional: Hide dropdown when clicking outside
+    window.addEventListener('click', function(event) {
+        if (!event.target.closest('.logo-dropdown')) {
+            var dropdownContent = document.getElementById('dropdownContent');
+            if (dropdownContent.style.display === 'block') {
+                dropdownContent.style.display = 'none';
+            }
+        }
+    });
+    
 
-          logo.addEventListener('click', function(event) {
-              event.preventDefault(); // Prevent the default anchor behavior
-              dropdownContent.classList.toggle('show');
-          });
-
-          // Optional: Close the dropdown if clicked outside
-          window.addEventListener('click', function(event) {
-              if (!event.target.matches('.logo img')) {
-                  if (dropdownContent.classList.contains('show')) {
-                      dropdownContent.classList.remove('show');
-                  }
-              }
-          });
-      });
   </script>
+  
 
     <script
       data-cfasync="false"
