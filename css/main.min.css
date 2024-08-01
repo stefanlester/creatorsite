@@ -137,7 +137,7 @@ h6 {
 /* Additional styling for responsiveness */
 @media (max-width: 991px) {
     .center-image {
-        top: 400%; /* Adjust as needed for mobile view */
+        top: 800%; /* Adjust as needed for mobile view */
     }
 }
 
