@@ -150,12 +150,12 @@ h6 {
 .logo {
   position: relative;
   display: inline-block;
-  width: 150px; /* Set the width to the desired logo size */
+  width: 120px; /* Set the width to the desired logo size */
   height: auto;
 }
 
 .logo-image {
-  width: 100%;
+  width: 120%;
   height: auto;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Increase duration and use ease-in-out for smoother effect */
 }
