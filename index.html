@@ -81,20 +81,21 @@
             <div class="wrap wrap--w1790">
               <div class="container-fluid">
                 <div class="header__content">
-               
                   <div class="logo-dropdown">
-                    <a href="#" class="logo" id="logo">
-                        <img src="images/cr1.png" alt="Creator Logo 1" class="logo-image visible" />
-                        <img src="images/cr2.png" alt="Creator Logo 2" class="logo-image" />
-                    </a>
-                    <div class="dropdown-content" id="dropdownContent">
-                        <a href="about-us.html">About</a>
-                        <a href="projects.html">Projects</a>
-                        <a href="creators.html">Creators</a>
+                    <div class="logo" id="logo">
+                      <img
+                        src="images/cr2.png"
+                        alt="Creator Logo"
+                        class="logo-image"
+                      />
                     </div>
-                </div>            
+                    <div class="dropdown-content" id="dropdownContent">
+                      <a href="about-us.html">About</a>
+                      <a href="projects.html">Projects</a>
+                      <a href="creators.html">Creators</a>
+                    </div>
+                  </div>
                   <div class="header__content-right">
-                 
                     <div class="header-social">
                       <ul class="list-social">
                         <li class="list-social__item">
@@ -132,9 +133,20 @@
           <div class="header-mobile__bar">
             <div class="container-fluid">
               <div class="header-mobile__bar-inner">
-                <a class="logo" href="index.html">
-                  <img src="images/cr1.png" width="100" alt="Tatee" />
-                </a>
+                <div class="logo-dropdown">
+                  <div class="logo" id="logo">
+                    <img
+                      src="images/cr2.png"
+                      alt="Creator Logo"
+                      class="logo-image"
+                    />
+                  </div>
+                  <div class="dropdown-content" id="dropdownContent">
+                    <a href="#link1">Menu 1</a>
+                    <a href="#link2">Menu 2</a>
+                    <a href="#link3">Menu 3</a>
+                  </div>
+                </div>
                 <button
                   class="hamburger hamburger--slider float-right"
                   type="button"
@@ -169,11 +181,8 @@
                 <li class="menu-item">
                   <a href="creators.html">Creators</a>
                 </li>
-                
               </ul>
             </div>
-
-          
           </nav>
         </div>
       </header>
@@ -258,10 +267,7 @@
                   >
                   </a>
                 </li>
-                <li
-                  class="rev-item rev-item-1"
-                  data-transition="crossfade"
-                >
+                <li class="rev-item rev-item-1" data-transition="crossfade">
                   <img
                     class="rev-slidebg"
                     src="images/creator8/HSUN3.jpg"
@@ -386,37 +392,27 @@
     </div>
 
     <script>
-      document.getElementById('logo').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default action if the link has an href
-    
-        var logo1 = document.querySelectorAll('.logo-image')[0];
-        var logo2 = document.querySelectorAll('.logo-image')[1];
-    
-        if (logo1.classList.contains('visible')) {
-            logo1.classList.remove('visible');
-            logo2.classList.add('visible');
-        } else {
-            logo1.classList.add('visible');
-            logo2.classList.remove('visible');
-        }
-    
-        var dropdownContent = document.getElementById('dropdownContent');
-        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-    });
-    
-    // Optional: Hide dropdown when clicking outside
-    window.addEventListener('click', function(event) {
-        if (!event.target.closest('.logo-dropdown')) {
-            var dropdownContent = document.getElementById('dropdownContent');
-            if (dropdownContent.style.display === 'block') {
-                dropdownContent.style.display = 'none';
-            }
-        }
-    });
-    
+      // Toggle dropdown menu on click
+      document
+        .getElementById("logo")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default action if the link has an href
 
-  </script>
-  
+          var dropdownContent = document.getElementById("dropdownContent");
+          dropdownContent.style.display =
+            dropdownContent.style.display === "block" ? "none" : "block";
+        });
+
+      // Optional: Hide dropdown when clicking outside
+      window.addEventListener("click", function (event) {
+        if (!event.target.closest(".logo-dropdown")) {
+          var dropdownContent = document.getElementById("dropdownContent");
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          }
+        }
+      });
+    </script>
 
     <script
       data-cfasync="false"
@@ -486,7 +482,6 @@
     <script type="text/javascript" src="js/config-revolution.min.js"></script>
 
     <script src="js/global.js"></script>
-    
   </body>
 
   <!-- Mirrored from freebw.com/templates/tatee/home-main.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Jul 2024 14:46:58 GMT -->

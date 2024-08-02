@@ -117,7 +117,7 @@ h6 {
 /* Center the image */
 .center-image {
     position: absolute;
-    top: 800%; /* Adjust this value to move the image down */
+    top: 600%; /* Adjust this value to move the image down */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10; /* Ensure it is above other elements */
@@ -137,7 +137,7 @@ h6 {
 /* Additional styling for responsiveness */
 @media (max-width: 991px) {
     .center-image {
-        top: 700%; /* Adjust as needed for mobile view */
+        top: 450%; /* Adjust as needed for mobile view */
     }
 }
 
@@ -155,19 +155,14 @@ h6 {
 }
 
 .logo-image {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: auto;
-  transition: opacity 0.5s ease, transform 0.3s ease, filter 0.3s ease;
-  opacity: 0;
-  pointer-events: none; /* Prevent click events on non-visible logos */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Increase duration and use ease-in-out for smoother effect */
 }
 
-.logo-image.visible {
-  opacity: 1;
-  position: relative; /* Ensures the visible logo is on top */
+.logo-image:hover {
+  transform: scale(1.3); /* Slightly increase the size on hover */
+  opacity: 0.9; /* Slightly reduce opacity on hover */
 }
 
 .dropdown-content {
@@ -189,6 +184,7 @@ h6 {
 .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
+
 
 
 li > ol,

@@ -81,42 +81,25 @@
             <div class="wrap wrap--w1790">
               <div class="container-fluid">
                 <div class="header__content">
-                  <div class="logo">
-                    <a href="#">
+                  <div class="logo-dropdown">
+                    <div class="logo" id="logo">
                       <img
-                        src="images/cr1.png"
-                        height="700"
-                        width="150"
-                        alt="creator"
+                        src="images/cr2.png"
+                        alt="Creator Logo"
+                        class="logo-image"
                       />
-                    </a>
+                    </div>
+                    <div class="dropdown-content" id="dropdownContent">
+                      <a href="about-us.html">About</a>
+                      <a href="projects.html">Projects</a>
+                      <a href="creators.html">Creators</a>
+                    </div>
                   </div>
                   <div class="header__content-right">
-                    <nav class="header-nav-menu">
-                      <ul class="menu nav-menu">
-                        <li class="menu-item menu-item-has-children">
-                          <a href="index.html">Home</a>
-                         
-                        </li>
-                        <li class="menu-item">
-                          <a href="creators.html">Creators</a>
-                        </li>
-                        <li class="menu-item menu-item-has-children">
-                          <a href="projects.html">Projects</a>
-                        
-                        </li>
-                        <li class="menu-item">
-                          <a href="about-us.html">About</a>
-                        </li>
-                        
-                    
-                      </ul>
-                    </nav>
                     <div class="header-social">
                       <ul class="list-social">
                         <li class="list-social__item">
-                          <a class="ic-fb" href="#">
-                          </a>
+                          <a class="ic-fb" href="#"></a>
                         </li>
                         <li class="list-social__item">
                           <a class="ic-insta" href="#">
@@ -128,22 +111,34 @@
                             <i class="zmdi zmdi-twitter"></i>
                           </a>
                         </li>
-                     
                       </ul>
                     </div>
                   </div>
                 </div>
+            
               </div>
             </div>
           </div>
         </div>
+
         <div class="header-mobile d-block d-lg-none">
           <div class="header-mobile__bar">
             <div class="container-fluid">
               <div class="header-mobile__bar-inner">
-                <a class="logo" href="index-2.html">
-                  <img src="images/cr1.png" width="100" alt="creator" />
-                </a>
+                <div class="logo-dropdown">
+                  <div class="logo" id="logo">
+                    <img
+                      src="images/cr2.png"
+                      alt="Creator Logo"
+                      class="logo-image"
+                    />
+                  </div>
+                  <div class="dropdown-content" id="dropdownContent">
+                    <a href="#link1">Menu 1</a>
+                    <a href="#link2">Menu 2</a>
+                    <a href="#link3">Menu 3</a>
+                  </div>
+                </div>
                 <button
                   class="hamburger hamburger--slider float-right"
                   type="button"
@@ -154,28 +149,23 @@
                 </button>
               </div>
             </div>
+    
           </div>
           <nav class="header-nav-menu-mobile">
             <div class="container-fluid">
               <ul class="menu nav-menu menu-mobile">
                 <li class="menu-item">
                   <a href="index.html">Home</a>
-                
                 </li>
                 <li class="menu-item">
                   <a href="about-us.html">About</a>
                 </li>
                 <li class="menu-item">
                   <a href="projects.html">Projects</a>
-                 
                 </li>
                 <li class="menu-item">
                   <a href="creators.html">Creators</a>
-                 
                 </li>
-              
-               
-             
               </ul>
             </div>
           </nav>
@@ -309,6 +299,29 @@
         </div>
       </footer>
     </div>
+
+    <script>
+      // Toggle dropdown menu on click
+      document
+        .getElementById("logo")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default action if the link has an href
+
+          var dropdownContent = document.getElementById("dropdownContent");
+          dropdownContent.style.display =
+            dropdownContent.style.display === "block" ? "none" : "block";
+        });
+
+      // Optional: Hide dropdown when clicking outside
+      window.addEventListener("click", function (event) {
+        if (!event.target.closest(".logo-dropdown")) {
+          var dropdownContent = document.getElementById("dropdownContent");
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          }
+        }
+      });
+    </script>
 
     <script
       data-cfasync="false"
