@@ -117,7 +117,7 @@ h6 {
 /* Center the image */
 .center-image {
     position: absolute;
-    top: 600%; /* Adjust this value to move the image down */
+    top: 400%; /* Adjust this value to move the image down */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10; /* Ensure it is above other elements */
