@@ -138,6 +138,7 @@ h6 {
 @media (max-width: 991px) {
     .center-image {
         top: 300%; /* Adjust as needed for mobile view */
+        width: 750px;
     }
 }
 
