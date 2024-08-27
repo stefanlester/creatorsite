@@ -1,0 +1,61 @@
+"SPACE TO DREAM" BENEATH ON THE GLASSES ON THE INTRO PAGE
+
+PAGE TABS > MENU REAVEAL AFTER LOGO CLICK
+LOGO SHOULD ANIMATE WHEN HOVERED ON
+ABOUT
+PROJECTS
+CREATORS (SIMILAR TO BIG)
+
+RIPPLE LOGO PLACED IN THE MIDDLE OF THE PROJECTS SLIDESHOW
+RIPPLE LOGO LINKED TO ABOUT PAGE
+RIPPLE LOGO ANIMATES FROM TRANSPARENT TO RED COLOR WHEN HOVERED ON
+RENDERS SLIDE SHOW LINKED TO MAIN PROJECTS PAGE
+
+SCRIPT TEXTS ON ALL PAGES 
+- TIMELESS ARHCHITECTURE -HOME
+- SUSTAINABLE LUXURY -  PROJECTS PAGE
+- FORM EVER FOLLOWS FUNCTION - ABOUT PAGE
+- EVERYONE IS A CREATOR - CREATORS PAGE
+- SPACE TO DREAM - CAREERS
+
+VISION ON PROJECT PAGE
+To Design for the people. To be the most client-centric firm in the world. Our vision is to bring your vision to life. Here is a space to create, a space to dream.
+
+MISION ON THE CREATORS PAGE
+Creating timeless architecture through sustainable luxury.
+
+BIO
+creator is an innovative architectural
+firm based in Ghana. Established in
+2020, the firm has quickly gained a
+reputation for delivering exceptional
+design solutions that combine creativity,
+functionality, and sustainability.
+Led by creatorachi and his team of
+talented design staff, creator has completed
+a wide range of projects, including
+residential and commercial spaces
+across Ghana and other African
+countries.
+
+"At creator, we weave stories into the fabric of time by reducing architecture to its essence and simplest form, even in the most complex projects. Pure lines, minimal materials, local references, functionality, and cost lay the foundations of our timeless, quality architecture. 
+Architecture is our lifestyle—a canvas where everyone is a creator, shaping a legacy that truly endures."
+
+Hanson Nartey (creatorachi)
+Founder & Creative Director
+
+SUB DIVS FOR PROJECT PAGE
+ARCHITECTURAL DESIGN
+CONSTRUCTION
+PRODUCT DESIGN
+
+
+
+
+
+
+
+
+
+
+

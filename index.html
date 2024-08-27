@@ -27,6 +27,12 @@
       rel="stylesheet"
       media="all"
     />
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
     <link
       href="vendor/themify-font/themify-icons.css"
       rel="stylesheet"
@@ -74,7 +80,12 @@
     />
   </head>
   <body class="animsition js-preloader">
+    <div id="loadingScreen">
+      <div class="loadingText">TIMELESS ARCHITECTURE<span style="color: red;"> .</span><br /></div>
+    </div>
+    
     <div class="page-wrapper">
+      
       <header id="header">
         <div class="header header-1 d-none d-lg-block js-header-1">
           <div class="header__bar">
@@ -82,34 +93,82 @@
               <div class="container-fluid">
                 <div class="header__content">
                   <div class="logo-dropdown">
+
                     <div class="logo" id="logo">
+
                       <img
                         src="images/cr2.png"
                         alt="Creator Logo"
                         class="logo-image"
+                        width="11px"
+                        height="11px"
                       />
+                      
                     </div>
+
                     <div class="dropdown-content" id="dropdownContent">
+                      <a href="index.html">Home</a>
                       <a href="about-us.html">About</a>
                       <a href="projects.html">Projects</a>
                       <a href="creators.html">Creators</a>
+                      <a href="careers.html">Careers</a>
                     </div>
                   </div>
                   <div class="header__content-right">
                     <div class="header-social">
                       <ul class="list-social">
+
                         <li class="list-social__item">
-                          <a class="ic-fb" href="#"></a>
-                        </li>
-                        <li class="list-social__item">
-                          <a class="ic-insta" href="#">
+                          <a class="ic-insta" href="#" title="Instagram">
                             <i class="zmdi zmdi-instagram"></i>
                           </a>
                         </li>
+
                         <li class="list-social__item">
-                          <a class="ic-twi" href="#">
-                            <i class="zmdi zmdi-twitter"></i>
+                          <a class="ic-insta" href="#">
+                            <img
+                              src="images/twitterx.png"
+                              alt="Image Description"
+                              width="11px"
+                              height="11px"
+                            />
                           </a>
+                        </li>
+
+                        <li class="list-social__item">
+                          <a class="ic-insta" href="#">
+                            <img
+                              src="images/phonex.png"
+                              alt="Image Description"
+                              width="12px"
+                              height="12px"
+                            />
+                          </a>
+                        </li>
+                        
+                        <li class="list-social__item">
+                          <a class="navbar-brand logo" href="#">
+                            <img
+                              src="images/emailx.png"
+                              alt="Image Description"
+                              width="14px"
+                              height="14px"
+                            />
+                          </a>
+                        </li>
+
+                        <li class="list-social__item">
+                          <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarNav"
+                            aria-controls="navbarNav"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                          >
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
                         </li>
                       </ul>
                     </div>
@@ -127,7 +186,6 @@
                     />
                   </div>
                 </a>
-                
               </div>
             </div>
           </div>
@@ -143,22 +201,18 @@
                       src="images/cr2.png"
                       alt="Creator Logo"
                       class="logo-image"
+                      width="20px"
+                      height="20px"
                     />
                   </div>
                   <div class="dropdown-content" id="dropdownContent">
-                    <a href="#link1">Menu 1</a>
-                    <a href="#link2">Menu 2</a>
-                    <a href="#link3">Menu 3</a>
+                    <a href="#link1">About</a>
+                    <a href="#link2">Projects</a>
+                    <a href="#link3">Creators</a>
+                    <a href="#link3">Careers</a>
                   </div>
                 </div>
-                <button
-                  class="hamburger hamburger--slider float-right"
-                  type="button"
-                >
-                  <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                  </span>
-                </button>
+              
               </div>
             </div>
             <a href="about-us.html">
@@ -172,7 +226,6 @@
                 />
               </div>
             </a>
-            
           </div>
           <nav class="header-nav-menu-mobile">
             <div class="container-fluid">
@@ -189,238 +242,158 @@
                 <li class="menu-item">
                   <a href="creators.html">Creators</a>
                 </li>
+                <li class="menu-item">
+                  <a href="careers.html">Careers</a>
+                </li>
               </ul>
             </div>
           </nav>
         </div>
       </header>
 
-      <main id="main">
-        <div class="page-line">
-          <div class="container">
-            <div class="page-line__inner">
-              <div class="page-col"></div>
-              <div class="page-col"></div>
-              <div class="page-col"></div>
-            </div>
+      <main
+        id="main"
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          min-height: 100vh;
+          padding-top: 0;
+          margin-top: -40px;
+          background-color: #ffffff;
+        "
+      >
+        <div
+          class="wrap wrap--w1790"
+          style="
+            flex: 1;
+            max-width: 80%;
+            background-color: #f5f5f5;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <div
+            class="container-fluid"
+            style="display: flex; justify-content: center"
+          >
+            <article
+              class="project-style-3"
+              style="width: 100%; max-width: 1200px"
+            >
+              <div
+                class="rev_slider_wrapper rev_slider_wrapper--p80"
+                style="padding: 20px; background-color: #ffffff"
+              >
+                <div
+                  class="rev_slider fullwidthabanner js-rev"
+                  data-version="5.4.4"
+                  style="display: block"
+                  data-rev-layout="fullscreen"
+                  data-rev-arrows="false"
+                  data-rev-bullets="true"
+                  data-rev-stylebullet="au-rev-bullet-2"
+                  data-rev-voffbullet="40"
+                  data-rev-spacebullet="20"
+                >
+                  <ul>
+                    <li
+                      class="rev-item rev-item-1"
+                      data-transition="crossfade"
+                      style="background-color: #000"
+                    >
+                      <img
+                        class="rev-slidebg"
+                        src="images/creator1/NHS4.jpg"
+                        alt="Master Slider 01"
+                        data-bgposition="center center"
+                        data-kenburns="on"
+                        data-duration="9000"
+                        data-ease="Linear.easeNone"
+                        data-scalestart="100"
+                        data-scaleend="110"
+                        data-rotatestart="0"
+                        data-rotateend="0"
+                        data-offsetstart="0 0"
+                        data-offsetend="0 0"
+                      />
+                    </li>
+                    <li
+                      class="rev-item rev-item-2"
+                      data-transition="zoomout"
+                      style="background-color: #000"
+                    >
+                      <img
+                        class="rev-slidebg"
+                        src="images/creator1/NHS3.jpg"
+                        alt="Master Slider 02"
+                        data-bgposition="center center"
+                        data-kenburns="on"
+                        data-duration="9000"
+                        data-ease="Linear.easeNone"
+                        data-scalestart="100"
+                        data-scaleend="110"
+                        data-rotatestart="0"
+                        data-rotateend="0"
+                        data-offsetstart="0 0"
+                        data-offsetend="0 0"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-
-        <section>
-          <div
-            class="rev_slider_wrapper rev_slider_wrapper--p80 tp-overflow-hidden"
-          >
-            <div
-              class="rev_slider fullwidthabanner js-rev"
-              data-version="5.4.4"
-              style="display: none"
-              data-rev-layout="fullscreen"
-            >
-              <ul>
-                <li class="rev-item rev-item-1" data-transition="crossfade">
-                  <img
-                    class="rev-slidebg"
-                    src="images/creator5/NEWNICC1.jpg"
-                    alt="Master Slider 01"
-                  />
-                  <h4
-                    class="tp-caption tp-resizeme rev-text-1"
-                    data-frames='[{"delay":0,"speed":1800,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":800,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                    data-x="['left']"
-                    data-y="['middle']"
-                    data-hoffset="[0, 0, 0, 0, 0]"
-                    data-voffset="[-118, -118, -70, -80, -80]"
-                    data-paddingleft="[0, 0, 0, 0, 15]"
-                    data-paddingright="[0, 0, 0, 0, 15]"
-                    data-width="['auto']"
-                    data-height='["auto"]'
-                    data-whitespace="[nowrap, nowrap, nowrap, nowrap, nowrap]"
-                    data-color="#fff"
-                    data-fontweight="400"
-                    data-fontsize="[11, 11, 18, 20, 20]"
-                    data-textalign="[left, left, left, center, center]"
-                  ></h4>
-                  <h2
-                    class="tp-caption tp-resizeme rev-text-2"
-                    data-frames='[{"delay":800,"speed":2100,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":800,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                    data-x="[left]"
-                    data-y="[center]"
-                    data-hoffset="[0, 0, 0, 0, 0]"
-                    data-voffset="[-35, -30, 15, 10, 10]"
-                    data-paddingleft="[0, 0, 0, 0, 15]"
-                    data-paddingright="[0, 0, 0, 0, 15]"
-                    data-width="[600,600,500,576,500]"
-                    data-height='["auto"]'
-                    data-lineheight="[60, 60, 45, 50, 45]"
-                    data-whitespace="normal"
-                    data-color="#fff"
-                    data-fontweight="700"
-                    data-fontsize="[48, 48, 46, 42, 46]"
-                    data-textalign="[left, left, left, left, left]"
-                  ></h2>
-                  <a
-                    class="tp-caption tp-resizeme"
-                    href="#"
-                    target="_self"
-                    data-frames='[{"delay":0,"speed":1800,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":800,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                    data-x="[left]"
-                    data-y="[center]"
-                    data-hoffset="[0, 0, 0, 0, 15]"
-                    data-voffset="[87, 87, 130, 130, 130]"
-                    data-width="['auto']"
-                    data-height='["auto"]'
-                    data-responsive_offset="on"
-                    data-responsive="off"
-                    data-whitespace="[nowrap, nowrap, nowrap, nowrap, nowrap]"
-                  >
-                  </a>
-                </li>
-                <li class="rev-item rev-item-1" data-transition="crossfade">
-                  <img
-                    class="rev-slidebg"
-                    src="images/creator8/HSUN3.jpg"
-                    alt="Master Slider 01"
-                  />
-                  <h4
-                    class="tp-caption tp-resizeme rev-text-1"
-                    data-frames='[{"delay":0,"speed":1800,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":800,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                    data-x="['left']"
-                    data-y="['middle']"
-                    data-hoffset="[0, 0, 0, 0, 0]"
-                    data-voffset="[-118, -118, -70, -80, -80]"
-                    data-paddingleft="[0, 0, 0, 0, 15]"
-                    data-paddingright="[0, 0, 0, 0, 15]"
-                    data-width="['auto']"
-                    data-height='["auto"]'
-                    data-whitespace="[nowrap, nowrap, nowrap, nowrap, nowrap]"
-                    data-color="#fff"
-                    data-fontweight="400"
-                    data-fontsize="[11, 11, 18, 20, 20]"
-                    data-textalign="[left, left, left, center, center]"
-                  ></h4>
-                  <h2
-                    class="tp-caption tp-resizeme rev-text-2"
-                    data-frames='[{"delay":800,"speed":2100,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":800,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                    data-x="[left]"
-                    data-y="[center]"
-                    data-hoffset="[0, 0, 0, 0, 0]"
-                    data-voffset="[-35, -30, 15, 10, 10]"
-                    data-paddingleft="[0, 0, 0, 0, 15]"
-                    data-paddingright="[0, 0, 0, 0, 15]"
-                    data-width="[600,600,500,576,500]"
-                    data-height='["auto"]'
-                    data-lineheight="[60, 60, 45, 50, 45]"
-                    data-whitespace="normal"
-                    data-color="#fff"
-                    data-fontweight="700"
-                    data-fontsize="[48, 48, 46, 42, 46]"
-                    data-textalign="[left, left, left, left, left]"
-                  ></h2>
-                  <a
-                    class="tp-caption tp-resizeme"
-                    href="#"
-                    target="_self"
-                    data-frames='[{"delay":0,"speed":1800,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":800,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                    data-x="[left]"
-                    data-y="[center]"
-                    data-hoffset="[0, 0, 0, 0, 15]"
-                    data-voffset="[87, 87, 130, 130, 130]"
-                    data-width="['auto']"
-                    data-height='["auto"]'
-                    data-responsive_offset="on"
-                    data-responsive="off"
-                    data-whitespace="[nowrap, nowrap, nowrap, nowrap, nowrap]"
-                  >
-                  </a>
-                </li>
-                <li class="rev-item rev-item-1" data-transition="crossfade">
-                  <img
-                    class="rev-slidebg"
-                    src="images/creator9/YAZZ3.jpg"
-                    alt="Master Slider 01"
-                  />
-                  <h4
-                    class="tp-caption tp-resizeme rev-text-1"
-                    data-frames='[{"delay":0,"speed":1800,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":800,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                    data-x="['left']"
-                    data-y="['middle']"
-                    data-hoffset="[0, 0, 0, 0, 0]"
-                    data-voffset="[-118, -118, -70, -80, -80]"
-                    data-paddingleft="[0, 0, 0, 0, 15]"
-                    data-paddingright="[0, 0, 0, 0, 15]"
-                    data-width="['auto']"
-                    data-height='["auto"]'
-                    data-whitespace="[nowrap, nowrap, nowrap, nowrap, nowrap]"
-                    data-color="#fff"
-                    data-fontweight="400"
-                    data-fontsize="[11, 11, 18, 20, 20]"
-                    data-textalign="[left, left, left, center, center]"
-                  ></h4>
-                  <h2
-                    class="tp-caption tp-resizeme rev-text-2"
-                    data-frames='[{"delay":800,"speed":2100,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":800,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                    data-x="[left]"
-                    data-y="[center]"
-                    data-hoffset="[0, 0, 0, 0, 0]"
-                    data-voffset="[-35, -30, 15, 10, 10]"
-                    data-paddingleft="[0, 0, 0, 0, 15]"
-                    data-paddingright="[0, 0, 0, 0, 15]"
-                    data-width="[600,600,500,576,500]"
-                    data-height='["auto"]'
-                    data-lineheight="[60, 60, 45, 50, 45]"
-                    data-whitespace="normal"
-                    data-color="#fff"
-                    data-fontweight="700"
-                    data-fontsize="[48, 48, 46, 42, 46]"
-                    data-textalign="[left, left, left, left, left]"
-                  ></h2>
-                  <a
-                    class="tp-caption tp-resizeme"
-                    href="#"
-                    target="_self"
-                    data-frames='[{"delay":0,"speed":1800,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":800,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                    data-x="[left]"
-                    data-y="[center]"
-                    data-hoffset="[0, 0, 0, 0, 15]"
-                    data-voffset="[87, 87, 130, 130, 130]"
-                    data-width="['auto']"
-                    data-height='["auto"]'
-                    data-responsive_offset="on"
-                    data-responsive="off"
-                    data-whitespace="[nowrap, nowrap, nowrap, nowrap, nowrap]"
-                  >
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="rev-spacer"></div>
-        </section>
       </main>
     </div>
 
     <script>
-      // Toggle dropdown menu on click
-      document
-        .getElementById("logo")
-        .addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent default action if the link has an href
+      document.addEventListener("DOMContentLoaded", function () {
+        var dropdownContent = document.getElementById("dropdownContent");
 
-          var dropdownContent = document.getElementById("dropdownContent");
-          dropdownContent.style.display =
-            dropdownContent.style.display === "block" ? "none" : "block";
-        });
+        // Initially hide the dropdown content
+        dropdownContent.style.display = "none";
 
-      // Optional: Hide dropdown when clicking outside
-      window.addEventListener("click", function (event) {
-        if (!event.target.closest(".logo-dropdown")) {
-          var dropdownContent = document.getElementById("dropdownContent");
-          if (dropdownContent.style.display === "block") {
+        // Toggle dropdown menu on logo click
+        document
+          .getElementById("logo")
+          .addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default action if the link has an href
+
+            if (dropdownContent.style.display === "none") {
+              dropdownContent.style.display = "block";
+            } else {
+              dropdownContent.style.display = "none";
+            }
+          });
+
+        // Hide dropdown when clicking outside of it
+        window.addEventListener("click", function (event) {
+          if (!event.target.closest(".logo-dropdown")) {
             dropdownContent.style.display = "none";
           }
-        }
+        });
       });
     </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set a timeout to hide the loading screen after 4 seconds
+        setTimeout(function () {
+          var loadingScreen = document.getElementById("loadingScreen");
+          loadingScreen.style.opacity = 0;
+          loadingScreen.style.transition = "opacity 7.2s ease-out";
+    
+          // Remove the loading screen from the DOM after the fade-out transition
+          setTimeout(function () {
+            loadingScreen.style.display = "none";
+          }, 500);
+        }, 4000); // 4000 milliseconds = 4 seconds
+      });
+    </script>
+    
+    
 
     <script
       data-cfasync="false"

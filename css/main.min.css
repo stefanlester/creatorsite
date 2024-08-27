@@ -142,6 +142,269 @@ h6 {
     }
 }
 
+/* Container for project items */
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust spacing between cards */
+}
+
+/* Card styling */
+.project-item {
+  flex: 1 1 calc(30% - 1px); /* Decrease the width */
+  box-sizing: border-box;
+}
+
+.media-project-2 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd; /* Card border */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow */
+  transition: transform 0.3s ease;
+}
+
+.media-project-2:hover {
+  transform: scale(1.03); /* Slight zoom effect on hover */
+}
+
+.media__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.media__body {
+  padding: 10px; /* Decrease padding inside the card */
+}
+
+.media__title {
+  font-size: 16px; /* Decrease font size */
+  font-weight: bold;
+  margin: 0;
+}
+
+.address {
+  display: block;
+  margin-top: 8px; /* Adjust spacing */
+  font-size: 12px; /* Decrease font size */
+  color: #666;
+}
+
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Container */
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* Headings */
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: #555;
+    border-bottom: 2px solid #d9534f; /* Red underline for heading */
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+/* Intro Text */
+.intro-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Job List */
+.job-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.job-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.job-item:hover {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+/* Job Title */
+.job-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+/* Job Description */
+.job-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* Apply Text */
+.apply-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.125rem;
+    color: #333;
+    margin-top: 2rem;
+}
+
+.apply-text a {
+    color: #d9534f;
+    text-decoration: none;
+}
+
+.apply-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* General Styles for the Section team*/
+.section.team {
+  padding: 60px 0;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.team-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.team-card__img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card__img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.team-card__img-wrap:hover .team-card__img {
+  transform: scale(1.1);
+}
+
+.team-card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+  border: 3px solid red;
+}
+
+.team-card__img-wrap:hover .team-card__overlay {
+  opacity: 1;
+}
+
+.team-card__social {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.team-card__social li a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.team-card__social li a:hover {
+  color: #ff6f61; /* Color for hover effect */
+}
+
+.team-card__body {
+  padding: 20px;
+  text-align: center;
+}
+
+.team-card__name {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.team-card__name a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.team-card__position {
+  color: #666;
+}
+
+#loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it appears above everything */
+}
+
+.loadingText {
+  font-size: 2em;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+
+
+
 
 .logo-dropdown {
   position: relative;
@@ -172,7 +435,7 @@ h6 {
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 9999; /* Ensure the dropdown is on top of other elements */
 }
 
 .dropdown-content a {
@@ -184,6 +447,17 @@ h6 {
 
 .dropdown-content a:hover {
   background-color: #f1f1f1;
+}
+
+/* Show the dropdown content on hover */
+.logo-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Additional styling to ensure dropdown stays within viewport */
+.dropdown-content {
+  max-height: 300px; /* Adjust height as necessary */
+  overflow-y: auto; /* Add scroll if content exceeds max height */
 }
 
 
