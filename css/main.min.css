@@ -116,30 +116,30 @@ h6 {
 
 /* Center the image */
 .center-image {
-    position: absolute;
-    top: 400%; /* Adjust this value to move the image down */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10; /* Ensure it is above other elements */
+  position: absolute;
+  top: 400%; /* Adjust this value to move the image down */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Ensure it is above other elements */
 }
 
 /* Control the opacity with transition */
 .center-img {
-    opacity: 0.5; /* Initial opacity */
-    transition: opacity 2.0s ease; /* Transition effect */
+  opacity: 0.5; /* Initial opacity */
+  transition: opacity 2s ease; /* Transition effect */
 }
 
 /* Change opacity on hover */
 .center-image:hover .center-img {
-    opacity: 1; /* Final opacity when hovered */
+  opacity: 1; /* Final opacity when hovered */
 }
 
 /* Additional styling for responsiveness */
 @media (max-width: 991px) {
-    .center-image {
-        top: 300%; /* Adjust as needed for mobile view */
-        width: 750px;
-    }
+  .center-image {
+    top: 300%; /* Adjust as needed for mobile view */
+    width: 750px;
+  }
 }
 
 /* Container for project items */
@@ -192,97 +192,96 @@ h6 {
 }
 
 /* Font Imports */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 /* Container */
 .container {
-    max-width: 960px;
-    margin: auto;
-    padding: 0 15px;
+  max-width: 960px;
+  margin: auto;
+  padding: 0 15px;
 }
 
 /* Headings */
 h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 1rem;
-    font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 h2 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
-    color: #555;
-    border-bottom: 2px solid #d9534f; /* Red underline for heading */
-    padding-bottom: 0.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  color: #555;
+  border-bottom: 2px solid #d9534f; /* Red underline for heading */
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 /* Intro Text */
 .intro-text {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.125rem;
-    color: #666;
-    margin-bottom: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  color: #666;
+  margin-bottom: 2rem;
 }
 
 /* Job List */
 .job-list {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .job-item {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    transition: background-color 0.3s, transform 0.3s;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .job-item:hover {
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transform: translateY(-5px);
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 
 /* Job Title */
 .job-title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
 /* Job Description */
 .job-description {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #777;
-    line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.5;
 }
 
 /* Apply Text */
 .apply-text {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.125rem;
-    color: #333;
-    margin-top: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  color: #333;
+  margin-top: 2rem;
 }
 
 .apply-text a {
-    color: #d9534f;
-    text-decoration: none;
+  color: #d9534f;
+  text-decoration: none;
 }
 
 .apply-text a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
 
 /* General Styles for the Section team*/
 .section.team {
@@ -298,13 +297,13 @@ h2 {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .team-card__img-wrap {
@@ -401,7 +400,6 @@ h2 {
   font-weight: bold;
 }
 
-
 .logo-dropdown {
   position: relative;
   display: inline-block;
@@ -430,7 +428,7 @@ h2 {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 9999; /* Ensure the dropdown is on top of other elements */
 }
 
@@ -455,7 +453,6 @@ h2 {
   max-height: 300px; /* Adjust height as necessary */
   overflow-y: auto; /* Add scroll if content exceeds max height */
 }
-
 
 li > ol,
 li > ul {
