@@ -142,47 +142,71 @@ h6 {
   }
 }
 
-/* Container for project items */
+/* General styling for the project gallery */
 .project-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Adjust spacing between cards */
+  gap: 0; /* Remove spaces between the project items */
 }
 
-/* Card styling */
 .project-item {
-  flex: 1 1 calc(30% - 1px); /* Decrease the width */
+  flex: 1 1 calc(33.33% - 2px); /* Set the project item width to fit 3 items in a row, with minimal gaps */
   box-sizing: border-box;
+  margin: 0;
+  border-radius: 15px; /* Curvy borders for the project items */
+  overflow: hidden; /* Ensure the border radius affects the entire item */
 }
 
 .media-project-2 {
   display: flex;
   flex-direction: column;
-  border: 1px solid #ddd; /* Card border */
-  border-radius: 10px; /* Rounded corners */
-  overflow: hidden; /* Hide overflow */
-  transition: transform 0.3s ease;
+  border: 0; /* Remove borders to eliminate white space */
+  overflow: hidden;
 }
 
-.media-project-2:hover {
-  transform: scale(1.03); /* Slight zoom effect on hover */
+.media__img {
+  width: 100%;
+  position: relative;
+  padding-bottom: 100%; /* Create a square aspect ratio */
+  border-radius: 15px 15px 0 0; /* Curvy borders for the top corners */
 }
 
 .media__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the square without stretching */
+  border-radius: 10px 10px 10px 10px; /* Apply curvy borders to the image */
 }
 
 .media__body {
-  padding: 10px; /* Decrease padding inside the card */
+  display: none; /* Hide the body, including the title, for a minimal look */
 }
 
-.media__title {
-  font-size: 16px; /* Decrease font size */
-  font-weight: bold;
-  margin: 0;
+/* Mobile-specific changes */
+@media (max-width: 768px) {
+  .project-item {
+    flex: 1 1 calc(50% - 2px); /* Adjust to fit two items per row on smaller screens */
+  }
+
+  .media__img {
+    padding-bottom: 100%; /* Ensure images remain square on mobile */
+  }
+
+  .media__body {
+    display: block; /* Show the title below the image on mobile */
+    text-align: center;
+    padding: 8px 0;
+  }
+
+  .media__title {
+    font-size: 14px; /* Adjust font size for better readability on mobile */
+    word-wrap: break-word;
+  }
 }
+
 
 .address {
   display: block;
