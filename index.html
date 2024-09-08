@@ -82,7 +82,7 @@
   <body class="animsition js-preloader">
     <div id="loadingScreen">
       <div class="loadingText">
-        TIMELESS ARCHITECTURE<span style="color: red"> .</span><br />
+        <span class="typed-text">TIMELESS ARCHITECTURE<span style="color: red"> .</span></span><br />
       </div>
     </div>
 
@@ -464,19 +464,19 @@
     </div>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Set a timeout to hide the loading screen after 4 seconds
-        setTimeout(function () {
-          var loadingScreen = document.getElementById("loadingScreen");
-          loadingScreen.style.opacity = 0;
-          loadingScreen.style.transition = "opacity 7.2s ease-out";
-
-          // Remove the loading screen from the DOM after the fade-out transition
-          setTimeout(function () {
-            loadingScreen.style.display = "none";
-          }, 500);
-        }, 4000); // 4000 milliseconds = 4 seconds
+      document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+          document.getElementById('loadingScreen').style.opacity = 0;
+          document.getElementById('loadingScreen').style.transition = 'opacity 2s ease'; // Fade out the loading screen
+          setTimeout(function() {
+            document.getElementById('loadingScreen').style.display = 'none'; // Hide loading screen after fade out
+            document.getElementById('mainContent').style.display = 'block';
+            document.getElementById('mainContent').style.opacity = 1; // Fade in the main content
+          }, 2000); // Time to match the opacity transition duration
+        }, 7000); // 7 seconds delay
       });
+      
+      
     </script>
 
     <script>

@@ -453,22 +453,68 @@ h2 {
 }
 
 #loadingScreen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Ensure it appears above everything */
+  height: 100vh;
+  background-color: #000;
+  position: fixed; /* Ensure it covers the entire viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999; /* Ensure it's above all other content */
+}
+
+.typed-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 7s steps(21, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 22ch; /* 21 characters + the dot */
+  }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+#mainContent {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.header, .header-mobile {
+  position: relative; /* Ensure dropdowns are not affected */
+  z-index: 1000; /* Ensure dropdowns appear above other elements */
+}
+
+.header-mobile__bar {
+  z-index: 1001; /* Ensure mobile menu stays on top */
+}
+
+.header-nav-menu-mobile {
+  position: relative; /* Ensure proper positioning */
+  z-index: 1002; /* Ensure mobile menu items are above other content */
 }
 
 .loadingText {
+  font-family: 'Poppins', sans-serif; /* Adjust based on preference */
   font-size: 2em;
   color: #fff;
-  font-weight: bold;
 }
 
 .logo-dropdown {
