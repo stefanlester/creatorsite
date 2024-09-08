@@ -479,26 +479,28 @@
       });
     </script>
 
-    <!-- JavaScript to Handle Dropdown -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const logoDropdown = document.getElementById("logoDropdown");
-        const dropdownContent = document.getElementById("dropdownContent");
+      // Toggle dropdown menu on click
+      document
+        .getElementById("logo")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default action if the link has an href
 
-        logoDropdown.addEventListener("mouseenter", function () {
-          dropdownContent.style.display = "block";
-          dropdownContent.style.opacity = "1";
-          dropdownContent.style.transform = "translateY(0)";
+          var dropdownContent = document.getElementById("dropdownContent");
+          dropdownContent.style.display =
+            dropdownContent.style.display === "block" ? "none" : "block";
         });
 
-        logoDropdown.addEventListener("mouseleave", function () {
-          dropdownContent.style.display = "none";
-          dropdownContent.style.opacity = "0";
-          dropdownContent.style.transform = "translateY(-10px)";
-        });
+      // Optional: Hide dropdown when clicking outside
+      window.addEventListener("click", function (event) {
+        if (!event.target.closest(".logo-dropdown")) {
+          var dropdownContent = document.getElementById("dropdownContent");
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          }
+        }
       });
     </script>
-
     <script
       data-cfasync="false"
       src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
