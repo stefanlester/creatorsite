@@ -82,10 +82,10 @@
   <body class="animsition js-preloader">
     <div id="loadingScreen">
       <div class="loadingText">
-        <span class="typed-text">TIMELESS ARCHITECTURE<span style="color: red"> .</span></span><br />
+        <span class="typed-text"></span><span class="red-dot" style="color: red; display: none;">.</span><br />
       </div>
     </div>
-
+    
     <div class="page-wrapper">
       <header id="header">
         <div class="header header-1 d-none d-lg-block js-header-1">
@@ -465,19 +465,44 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function() {
+        // Typing effect setup
+        const text = "TIMELESS ARCHITECTURE";
+        const typedTextSpan = document.querySelector(".typed-text");
+        const redDot = document.querySelector(".red-dot");
+        let charIndex = 0;
+        let typingDelay = 4000 / text.length; // Faster typing, but still keeps within a shorter time
+    
+        function type() {
+          if (charIndex < text.length) {
+            typedTextSpan.textContent += text.charAt(charIndex);
+            charIndex++;
+            setTimeout(type, typingDelay);
+          } else {
+            // Show red dot after typing
+            redDot.style.display = "inline";
+          }
+        }
+    
+        // Start typing after a slight initial delay
+        setTimeout(type, 200);
+    
+        // Transition the loading screen out and main content in
         setTimeout(function() {
+          // Start fading out the loading screen
           document.getElementById('loadingScreen').style.opacity = 0;
-          document.getElementById('loadingScreen').style.transition = 'opacity 2s ease'; // Fade out the loading screen
+          document.getElementById('loadingScreen').style.transition = 'opacity 2s ease';
+    
+          // After 2 seconds, hide loading screen and fade in the main content
           setTimeout(function() {
-            document.getElementById('loadingScreen').style.display = 'none'; // Hide loading screen after fade out
+            document.getElementById('loadingScreen').style.display = 'none';
             document.getElementById('mainContent').style.display = 'block';
-            document.getElementById('mainContent').style.opacity = 1; // Fade in the main content
-          }, 2000); // Time to match the opacity transition duration
-        }, 7000); // 7 seconds delay
+            document.getElementById('mainContent').style.opacity = 1;
+            document.getElementById('mainContent').style.transition = 'opacity 2s ease';
+          }, 2000); // Matches the fade-out duration
+        }, 8000); // Shorter total delay to match faster typing
       });
-      
-      
     </script>
+    
 
     <script>
       // Toggle dropdown menu on click

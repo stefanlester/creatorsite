@@ -76,16 +76,15 @@
   <body class="animsition js-preloader">
     <div class="page-wrapper">
 
-       <header id="header">
+      <header id="header">
         <div class="header header-1 d-none d-lg-block js-header-1">
           <div class="header__bar">
             <div class="wrap wrap--w1790">
               <div class="container-fluid">
                 <div class="header__content">
-                  <div class="logo-dropdown">
-
+                  <!-- HTML Structure -->
+                  <div class="logo-dropdown" id="logoDropdown">
                     <div class="logo" id="logo">
-
                       <img
                         src="images/cr1.png"
                         alt="Creator Logo"
@@ -93,11 +92,9 @@
                         width="11px"
                         height="11px"
                       />
-                      
                     </div>
 
                     <div class="dropdown-content" id="dropdownContent">
-                      <a href="index.html">Home</a>
                       <a href="about-us.html">About</a>
                       <a href="projects.html">Projects</a>
                       <a href="creators.html">Creators</a>
@@ -107,7 +104,6 @@
                   <div class="header__content-right">
                     <div class="header-social">
                       <ul class="list-social">
-
                         <li class="list-social__item">
                           <a
                             class="ic-insta"
@@ -118,7 +114,7 @@
                           </a>
                         </li>
 
-                         <li class="list-social__item">
+                        <li class="list-social__item">
                           <a
                             class="ic-insta"
                             href="https://x.com/creatorcave_?s=11"
@@ -142,7 +138,7 @@
                             />
                           </a>
                         </li>
-                        
+
                         <li class="list-social__item">
                           <a
                             class="navbar-brand logo"
@@ -174,12 +170,11 @@
                     </div>
                   </div>
                 </div>
-              
+               
               </div>
             </div>
           </div>
         </div>
-
         <div class="header-mobile d-block d-lg-none">
           <div class="header-mobile__bar">
             <div class="container-fluid">
@@ -193,19 +188,49 @@
                     />
                   </div>
                   <div class="dropdown-content" id="dropdownContent">
-                    <a href="index.html">Home</a>
-                      <a href="about-us.html">About</a>
-                      <a href="projects.html">Projects</a>
-                      <a href="creators.html">Creators</a>
-                      <a href="careers.html">Careers</a>
+                    <a href="about-us.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="creators.html">Creators</a>
+                    <a href="careers.html">Careers</a>
                   </div>
                 </div>
-              
+
+                <!-- Social Icons for Mobile -->
+                <div class="header-social">
+                  <ul class="list-social">
+                    <li class="list-social__item">
+                      <a
+                        href="https://www.instagram.com/creatorcave_?igsh=MXVtaHM2ZDF5aWpqMg=="
+                        title="Instagram"
+                      >
+                        <i class="zmdi zmdi-instagram" width="17px"
+                        height="17px"></i>
+                      </a>
+                    </li>
+                    <li class="list-social__item">
+                      <a href="https://x.com/creatorcave_?s=11">
+                        <img src="images/twitterx.png" alt="Twitter"  width="13px"
+                        height="13px"/>
+                      </a>
+                    </li>
+                    <li class="list-social__item">
+                      <a href="tel:0312299356">
+                        <img src="images/phonex.png" alt="Phone"  width="13px"
+                        height="13px"/>
+                      </a>
+                    </li>
+                    <li class="list-social__item">
+                      <a href="mailto:info@creatorinlet.com">
+                        <img src="images/emailx.png" alt="Email"  width="13px"
+                        height="13px"/>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+             
               </div>
             </div>
-          
           </div>
-          
         </div>
       </header>
 
@@ -264,7 +289,7 @@
           </figure>
           <div class="team-card__body">
             <h4 class="team-card__name"><a href="#">Augustine Pimpong</a></h4>
-            <span class="team-card__position">General Manager & COO</span>
+            <span class="team-card__position">COO & General Manager</span>
           </div>
           
         </div>
@@ -283,7 +308,7 @@
               </figure>
               <div class="team-card__body">
                 <h4 class="team-card__name"><a href="#">Percy Addo</a></h4>
-                <span class="team-card__position">CFO / Project Manager</span>
+                <span class="team-card__position">CFO & Project Manager</span>
               </div>
             </div>
           </div>
@@ -503,7 +528,22 @@
           </figure>
           <div class="team-card__body">
             <h4 class="team-card__name"><a href="#">Ezra Ayitey</a></h4>
-            <span class="team-card__position">Intern - Interior Design</span>
+            <span class="team-card__position">Intern - Visualizer</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="team-card" style="margin-top: 20px;"> <!-- Added margin-top -->
+          <figure class="team-card__img-wrap">
+            <img class="team-card__img" src="images/Photos/Stefan.jpg" alt="Prosper Adu">
+            <div class="team-card__overlay">
+             
+            </div>
+          </figure>
+          <div class="team-card__body">
+            <h4 class="team-card__name"><a href="#">Stefan Amoah</a></h4>
+            <span class="team-card__position">Principal Software Engineer</span>
           </div>
         </div>
       </div>
